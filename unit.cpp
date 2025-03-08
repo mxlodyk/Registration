@@ -16,10 +16,3 @@ istream & operator >> (istream &input, Unit &C) {
     input >> C.name >> C.id >> C.credits;
     return input;
 }
-
-ostream & operator << (ostream &os, const Unit &C) {
-    os << "  Course:  " << C.name << '\n'
-       << "  Section: " << C.id << '\n'
-       << "  Credits: " << C.credits << '\n';
-    return os;
-}

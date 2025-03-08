@@ -20,16 +20,15 @@ int main()
     ofstream ofile( "routput.txt" );
 
     ofile << R
-          << "Number of courses = " << R.GetCount() << '\n'
-          << "Total credits     = " << R.GetCredits() << '\n';
+          << '\n'
+          << "Number of units = " << R.GetCount() << '\n'
+          << "Total marks     = " << R.GetMarks() << '\n';
 
 
-    //For Lab 3, you should comment out this line and the next 3 lines
-    //Course aCourse( "MTH_3020", 'B', 2 );
-    //aCourse.SetCredits( 5 );
-    //cout << aCourse << endl; // the operator << for Course is called
-
+    // Commented out as per the specification
+    // Course aCourse( "MTH_3020", 'B', 2 );
+    // aCourse.SetCredits( 5 );
+    // cout << aCourse << endl; // the operator << for Course is called
 
     return 0;
 }
-

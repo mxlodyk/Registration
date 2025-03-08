@@ -1,20 +1,26 @@
 Student ID: 102234
 Semester:   962
-  Course:  CHM_1020
-  Section: C
-  Credits: 3
 
-  Course:  MUS_1100
-  Section: H
+  Unit ID: C
+  Unit Name: CHM_1020
+  Credits: 3
+  Mark: 50
+
+  Unit ID: H
+  Unit Name: MUS_1100
   Credits: 1
+  Mark: 50
 
-  Course:  BIO_1040
-  Section: D
+  Unit ID: D
+  Unit Name: BIO_1040
   Credits: 4
+  Mark: 50
 
-  Course:  MTH_2400
-  Section: A
+  Unit ID: A
+  Unit Name: MTH_2400
   Credits: 3
+  Mark: 50
 
-Number of courses = 4
-Total credits     = 11
+
+Number of units = 4
+Total marks     = 200

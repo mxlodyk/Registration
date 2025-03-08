@@ -1,7 +1,7 @@
-#ifndef REGIST_H
-#define REGIST_H
+#ifndef REGISTRATION_H
+#define REGISTRATION_H
 
-#include "unit.h"
+#include "result.h"
 
 #include <iostream>
 
@@ -13,7 +13,7 @@ class Registration {
 public:
     Registration();
 
-    unsigned GetCredits() const;
+    float GetMarks() const;
     unsigned GetCount() const;
 
     friend ostream & operator <<( ostream & os, const Registration & R);
@@ -24,7 +24,7 @@ private:
     long studentId;
     unsigned semester;
     unsigned count;
-    Unit courses[MaxCourses];
+    Result results[MaxCourses];
 };
 
 inline unsigned Registration::GetCount() const {
@@ -32,4 +32,3 @@ inline unsigned Registration::GetCount() const {
 }
 
 #endif
-
