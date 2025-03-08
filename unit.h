@@ -10,7 +10,13 @@ const unsigned CourseNameSize = 10;
 class Unit {
 public:
     Unit();
-    Unit(const char *nam, char sect, unsigned cred);
+    Unit(const char *nam, char idx, unsigned cred);
+
+    const char* GetName() const;
+    void SetName(const char* newName);
+
+    char GetID() const;
+    void SetID(char newID);
 
     unsigned GetCredits() const;
     void SetCredits(unsigned cred);
@@ -20,9 +26,26 @@ public:
 
 private:
     char name[CourseNameSize];
-    char section;
+    char id;
     int  credits;
 };
+
+inline void Unit::SetName(const char* newName) {
+    strncpy(name, newName, CourseNameSize - 1);
+
+}
+
+inline const char* Unit::GetName() const {
+    return name;
+}
+
+inline char Unit::GetID() const {
+    return id;
+}
+
+inline void Unit::SetID(char newID) {
+    id = newID;
+}
 
 inline unsigned Unit::GetCredits() const {
     return credits;

@@ -6,20 +6,20 @@ Unit::Unit() {
     name[0] = '\0';
 }
 
-Unit::Unit(const char *nam, char sect, unsigned cred) {
+Unit::Unit(const char *nam, char idx, unsigned cred) {
     strncpy(name, nam, CourseNameSize);
-    section = sect;
+    id = idx;
     credits = cred;
 }
 
 istream & operator >> (istream &input, Unit &C) {
-    input >> C.name >> C.section >> C.credits;
+    input >> C.name >> C.id >> C.credits;
     return input;
 }
 
 ostream & operator << (ostream &os, const Unit &C) {
     os << "  Course:  " << C.name << '\n'
-       << "  Section: " << C.section << '\n'
+       << "  Section: " << C.id << '\n'
        << "  Credits: " << C.credits << '\n';
     return os;
 }
