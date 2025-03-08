@@ -67,6 +67,12 @@ build CMakeFiles/Registration.dir/unit.cpp.o: CXX_COMPILER__Registration_unscann
   OBJECT_DIR = CMakeFiles/Registration.dir
   OBJECT_FILE_DIR = CMakeFiles/Registration.dir
 
+build CMakeFiles/Registration.dir/result.cpp.o: CXX_COMPILER__Registration_unscanned_Debug /Users/melodyflavel/Projects/C++/ICT283/Registration/result.cpp || cmake_object_order_depends_target_Registration
+  DEP_FILE = CMakeFiles/Registration.dir/result.cpp.o.d
+  FLAGS = -g -std=gnu++11 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  OBJECT_DIR = CMakeFiles/Registration.dir
+  OBJECT_FILE_DIR = CMakeFiles/Registration.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Registration
@@ -75,7 +81,7 @@ build CMakeFiles/Registration.dir/unit.cpp.o: CXX_COMPILER__Registration_unscann
 #############################################
 # Link the executable Registration
 
-build Registration: CXX_EXECUTABLE_LINKER__Registration_Debug CMakeFiles/Registration.dir/main.cpp.o CMakeFiles/Registration.dir/registration.cpp.o CMakeFiles/Registration.dir/unit.cpp.o
+build Registration: CXX_EXECUTABLE_LINKER__Registration_Debug CMakeFiles/Registration.dir/main.cpp.o CMakeFiles/Registration.dir/registration.cpp.o CMakeFiles/Registration.dir/unit.cpp.o CMakeFiles/Registration.dir/result.cpp.o
   FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   OBJECT_DIR = CMakeFiles/Registration.dir
   POST_BUILD = :

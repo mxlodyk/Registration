@@ -7,4 +7,6 @@ add_executable(Registration main.cpp
         registration.cpp
         registration.h
         unit.cpp
-        unit.h)
+        unit.h
+        result.cpp
+        result.h)
