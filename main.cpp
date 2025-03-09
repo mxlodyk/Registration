@@ -7,11 +7,11 @@ using namespace std;
 
 int main()
 {
-    ifstream infile( "rinput.txt" );
+    ifstream infile("rinput.txt");
 
-    Registration registration1 = Registration();
+    Registration R;
 
-    infile >> registration1;
+    infile >> R;
 
 //    Unit newUnit = Unit("Data_Structures_And_Abstractions", "ICT283", 3);
 //    newUnit.SetCredits(10);
@@ -26,11 +26,13 @@ int main()
 
     ofstream ofile( "routput.txt" );
 
-    ofile << registration1
+    ofile << R
           << '\n'
-          << "Number of units = " << registration1.GetUnitCount() << '\n'
-          << "Total marks     = " << registration1.GetTotalMarks() << '\n';
+          << "Number of units = " << R.GetUnitCount() << '\n'
+          << "Total marks     = " << R.GetTotalMarks() << '\n';
 
+    // Sample run.
+    cout << R;
 
     // Commented out as per the specification
     // Course aCourse( "MTH_3020", 'B', 2 );

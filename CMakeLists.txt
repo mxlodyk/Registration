@@ -9,4 +9,6 @@ add_executable(Registration main.cpp
         unit.cpp
         unit.h
         result.cpp
-        result.h)
+        result.h
+        date.cpp
+        date.h)

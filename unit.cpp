@@ -1,14 +1,34 @@
 #include "unit.h"
 
-#include <string.h>
+Unit::Unit() : name(""), id(""), credits(0) {} // Default constructor using member initialiser list.
 
-Unit::Unit() {
-    name[0] = '\0';
+Unit::Unit(const std::string &newName, const std::string &newID, unsigned newCredits) {
+    name = newName;
+    id = newID;
+    credits = newCredits;
 }
 
-Unit::Unit(const char *newName, const char *newID, unsigned newCredits) {
-    strncpy(name, newName, CourseNameSize);
-    strncpy(id, newID, UnitIDSize);
+void Unit::SetName(const std::string& newName) {
+    name = newName;
+}
+
+std::string Unit::GetName() const {
+    return name;
+}
+
+std::string Unit::GetID() const {
+    return id;
+}
+
+void Unit::SetID(const std::string& newID) {
+    id = newID;
+}
+
+unsigned Unit::GetCredits() const {
+    return credits;
+}
+
+void Unit::SetCredits(unsigned newCredits) {
     credits = newCredits;
 }
 

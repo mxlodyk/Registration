@@ -2,20 +2,20 @@ Student ID: 33878648
 Semester:   1
 
   Unit ID: ICT202
-  Unit Name: Machine_Learning
+  Unit Name: Machine Learning
   Credits: 3
   Mark: 50
-
+  Date: 15/8/2025
   Unit ID: ICT283
-  Unit Name: Data_Structures_And_Abstractions
+  Unit Name: Data Structures And Abstractions
   Credits: 3
   Mark: 50
-
+  Date: 16/8/2025
   Unit ID: ICT373
-  Unit Name: Software_Architecture
+  Unit Name: Software Architecture
   Credits: 3
   Mark: 50
-
+  Date: 17/8/2025
 
 Number of units = 3
 Total marks     = 150

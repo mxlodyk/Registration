@@ -11,27 +11,28 @@ const unsigned MaxCourses = 10;
 
 class Registration {
 public:
+    Result results[MaxCourses]; // I know this shouldn't be public.
     Registration();
 
-//    long GetStudentID() const;
-//    unsigned GetSemester() const;
-//    unsigned GetCount() const;
-
-    Result GetResultByUnitName(const char* unitName) const;
-    //Result GetResultByUnitCode(const char*)
-
-    float GetTotalMarks() const;
+    long GetStudentID() const;
+    unsigned GetSemester() const;
     unsigned GetUnitCount() const;
+    std::array<Result, MaxCourses> GetResults() const;
+    float GetTotalMarks() const;
 
-    friend ostream & operator <<(ostream & os, const Registration & R);
+    void SetStudentID(long newStudentID);
+    void SetSemester(unsigned newSemester);
+    void SetUnitCount(unsigned newUnitCount);
 
-    friend istream & operator >>(istream & input, Registration & R);
+    bool AddResult(const Result& result);
 
 private:
     long studentID;
     unsigned semester;
     unsigned count;
-    Result results[MaxCourses];
 };
+
+ostream& operator <<(ostream& os, const Registration& R);
+istream& operator >>(istream& input, Registration& R);
 
 #endif
