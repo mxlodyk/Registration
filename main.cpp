@@ -8,21 +8,28 @@ using namespace std;
 int main()
 {
     ifstream infile( "rinput.txt" );
-    if(!infile) {
-        cout << "Error: Could not open input file 'rinput.txt'" << endl;
-        return -1;
-    }
 
-    Registration R;
+    Registration registration1 = Registration();
 
-    infile >> R;
+    infile >> registration1;
+
+//    Unit newUnit = Unit("Data_Structures_And_Abstractions", "ICT283", 3);
+//    newUnit.SetCredits(10);
+//    Result result1 = Result();
+//    result1.SetMark(100);
+//    Result result2 = Result();
+//    result2.SetMark(100);
+//    Registration registration = Registration();
+    //registration.
+    //cout << "Marks: " << newResult.GetMark();
+
 
     ofstream ofile( "routput.txt" );
 
-    ofile << R
+    ofile << registration1
           << '\n'
-          << "Number of units = " << R.GetCount() << '\n'
-          << "Total marks     = " << R.GetMarks() << '\n';
+          << "Number of units = " << registration1.GetUnitCount() << '\n'
+          << "Total marks     = " << registration1.GetTotalMarks() << '\n';
 
 
     // Commented out as per the specification

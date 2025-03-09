@@ -13,22 +13,25 @@ class Registration {
 public:
     Registration();
 
-    float GetMarks() const;
-    unsigned GetCount() const;
+//    long GetStudentID() const;
+//    unsigned GetSemester() const;
+//    unsigned GetCount() const;
 
-    friend ostream & operator <<( ostream & os, const Registration & R);
+    Result GetResultByUnitName(const char* unitName) const;
+    //Result GetResultByUnitCode(const char*)
 
-    friend istream & operator >>( istream & input, Registration & R );
+    float GetTotalMarks() const;
+    unsigned GetUnitCount() const;
+
+    friend ostream & operator <<(ostream & os, const Registration & R);
+
+    friend istream & operator >>(istream & input, Registration & R);
 
 private:
-    long studentId;
+    long studentID;
     unsigned semester;
     unsigned count;
     Result results[MaxCourses];
 };
-
-inline unsigned Registration::GetCount() const {
-    return count;
-}
 
 #endif

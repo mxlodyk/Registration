@@ -1,26 +1,21 @@
-Student ID: 102234
-Semester:   962
+Student ID: 33878648
+Semester:   1
 
-  Unit ID: C
-  Unit Name: CHM_1020
+  Unit ID: ICT202
+  Unit Name: Machine_Learning
   Credits: 3
   Mark: 50
 
-  Unit ID: H
-  Unit Name: MUS_1100
-  Credits: 1
+  Unit ID: ICT283
+  Unit Name: Data_Structures_And_Abstractions
+  Credits: 3
   Mark: 50
 
-  Unit ID: D
-  Unit Name: BIO_1040
-  Credits: 4
-  Mark: 50
-
-  Unit ID: A
-  Unit Name: MTH_2400
+  Unit ID: ICT373
+  Unit Name: Software_Architecture
   Credits: 3
   Mark: 50
 
 
-Number of units = 4
-Total marks     = 200
+Number of units = 3
+Total marks     = 150

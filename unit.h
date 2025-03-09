@@ -5,28 +5,29 @@
 
 using namespace std;
 
-const unsigned CourseNameSize = 10;
+const unsigned CourseNameSize = 50;
+const unsigned UnitIDSize = 10;
 
 class Unit {
 public:
     Unit();
-    Unit(const char *nam, char idx, unsigned cred);
+    Unit(const char *newName, const char *newID, unsigned newCredits);
 
     const char* GetName() const;
     void SetName(const char* newName);
 
-    char GetID() const;
-    void SetID(char newID);
+    const char* GetID() const;
+    void SetID(const char* newID);
 
     unsigned GetCredits() const;
-    void SetCredits(unsigned cred);
+    void SetCredits(unsigned newCredits);
 
-    friend ostream& operator << (ostream &os, const Unit &C);
-    friend istream& operator >> (istream &input, Unit &C);
+    friend ostream& operator << (ostream &os, const Unit &U);
+    friend istream& operator >> (istream &input, Unit &U);
 
 private:
     char name[CourseNameSize];
-    char id;
+    char id[UnitIDSize];
     int  credits;
 };
 
@@ -39,20 +40,20 @@ inline const char* Unit::GetName() const {
     return name;
 }
 
-inline char Unit::GetID() const {
+inline const char* Unit::GetID() const {
     return id;
 }
 
-inline void Unit::SetID(char newID) {
-    id = newID;
+inline void Unit::SetID(const char* newID) {
+    strncpy(id, newID, UnitIDSize - 1);
 }
 
 inline unsigned Unit::GetCredits() const {
     return credits;
 }
 
-inline void Unit::SetCredits(unsigned cred) {
-    credits = cred;
+inline void Unit::SetCredits(unsigned newCredits) {
+    credits = newCredits;
 }
 
 #endif
