@@ -5,23 +5,19 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     ifstream infile("rinput.txt");
 
     Registration R;
 
     infile >> R;
 
-//    Unit newUnit = Unit("Data_Structures_And_Abstractions", "ICT283", 3);
-//    newUnit.SetCredits(10);
-//    Result result1 = Result();
-//    result1.SetMark(100);
-//    Result result2 = Result();
-//    result2.SetMark(100);
-//    Registration registration = Registration();
-    //registration.
-    //cout << "Marks: " << newResult.GetMark();
+    Date testDate;
+    testDate.SetYear(2025);
+    testDate.SetMonth(2);
+    testDate.SetDay(20);
+
+    cout << testDate.GetDateAsString();
 
 
     ofstream ofile( "routput.txt" );

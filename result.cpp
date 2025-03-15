@@ -1,5 +1,6 @@
 #include "result.h"
 
+// Getters for the Result class.
 Unit Result::GetUnit() const {
     return unit;
 }
@@ -12,6 +13,7 @@ float Result::GetMark() const {
     return mark;
 }
 
+// Setters for the Result class.
 void Result::SetMark(float newMark) {
     mark = newMark;
 }
@@ -24,6 +26,7 @@ void Result::SetDate(Date newDate) {
     date = newDate;
 }
 
+// << Operator Overload for Result class.
 ostream& operator << (ostream &os, const Result &R) {
 
     const Unit& unitObj = R.GetUnit();
@@ -38,7 +41,7 @@ ostream& operator << (ostream &os, const Result &R) {
     return os;
 }
 
+// >> Operator Overload for Result class.
 istream& operator >> (istream &input, Result &R) {
-
     return input;
 }

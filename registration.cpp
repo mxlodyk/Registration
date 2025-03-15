@@ -4,10 +4,12 @@
 #include <string>
 #include <sstream>
 
+// Default constructor for Registration class.
 Registration::Registration() {
     count = 0;
 }
 
+// Getters for Registration class.
 long Registration::GetStudentID() const {
     return studentID;
 }
@@ -28,14 +30,7 @@ float Registration::GetTotalMarks() const {
     return sum;
 }
 
-//std::array<Result, MaxCourses> Registration::GetResults() const {
-//    std::array<Result, MaxCourses> resultArray;
-//    for (unsigned i = 0; i < MaxCourses; ++i) {
-//        resultArray[i] = results[i];
-//    }
-//    return resultArray;
-//}
-
+// Setters for Registration class.
 void Registration::SetStudentID(long newStudentID) {
     studentID = newStudentID;
 }
@@ -48,17 +43,7 @@ void Registration::SetUnitCount(unsigned int newUnitCount) {
     count = newUnitCount;
 }
 
-//bool Registration::AddResult(const Result& result) {
-//    if (count < MaxCourses) {
-//        results[count] = result;
-//        count++;
-//        return true; // Added successfully.
-//    } else {
-//        return false; // Not added because array is full.
-//    }
-//}
-
-// >> Operator Overload
+// >> Operator Overload for Registration class.
 istream& operator>>(istream& input, Registration& R) {
     string line;
 
@@ -128,7 +113,8 @@ istream& operator>>(istream& input, Registration& R) {
     return input;
 }
 
-ostream & operator <<( ostream & os, const Registration & R ) {
+// << Operator Overload for Registration class.
+ostream& operator <<(ostream & os, const Registration &R ) {
     os << "Student ID: " << R.GetStudentID() << '\n'
        << "Semester:   " << R.GetSemester() << '\n'
        << '\n';
